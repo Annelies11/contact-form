@@ -34,7 +34,7 @@ form.addEventListener('submit', (e) => {
         document.querySelector('#last-name').style.border = '1px solid var(--light-grey)'
     }
     // Email validation
-    if(isValidEmail(email)){
+    if(!isValidEmail(email)){
         isValid = false
         document.querySelector('#email + .form-alert').style.display = 'block'
         document.querySelector('#email').style.border = '1px solid var(--red)'
@@ -45,9 +45,9 @@ form.addEventListener('submit', (e) => {
     // Query type validation
     if(!queryType){
         isValid = false
-        document.querySelector('radio-inputs + .form-alert').style.display = 'block'
+        document.querySelector('.radio-inputs + .form-alert').style.display = 'block'
     } else {
-        document.querySelector('radio-inputs + .form-alert').style.display = 'none'
+        document.querySelector('.radio-inputs + .form-alert').style.display = 'none'
     }
     // Message validation
     if(message === ''){
